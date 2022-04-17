@@ -15,10 +15,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OmniSharp
+let g:OmniSharp_highlighting = 0
 " Sets how many lines of history VIM has to remember
 set history=500
 set relativenumber number 
 set mouse=a
+set colorcolumn=80
 set clipboard=unnamedplus
 set signcolumn=yes:1
 " Enable filetype plugins

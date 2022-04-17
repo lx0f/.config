@@ -161,9 +161,10 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-map <leader>py :w <cr> :! python3 %<cr>
-map <leader>pyt :w <cr> :! python3 % < inp<cr>
-
+noremap <f6> <esc> :w <cr> :! python3 %<cr>
+noremap <f7> <esc> :w <cr> :! python3 % < inp<cr>
+noremap <f8> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< <CR>
+noremap <f9> <ESC> :w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % && ./%< < inp<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

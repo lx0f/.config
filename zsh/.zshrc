@@ -101,6 +101,11 @@ alias vi="nvim"
 alias vim="nvim"
 alias :q="exit"
 
+alias l="exa"
+alias ls="exa"
+alias ll="exa -l"
+alias lll="exa -la"
+
 # PATH
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 eval 'neofetch'
