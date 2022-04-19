@@ -74,7 +74,8 @@ require('andy.null')
 
 
 ---------------------------
--- General Mappings
+-- Cmp Kind Icon's Colors
+-- NOTE: Always source cmp_color.vim last
 ---------------------------
 vim.cmd 'source ~/.config/nvim/vim/cmp_color.vim'
 ---------------------------

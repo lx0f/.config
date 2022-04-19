@@ -1,6 +1,12 @@
 local lspconfig = require('lspconfig')
 local on_attach = function(_, bufnr)
     local opts = { buffer = bufnr }
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+    vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+    vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
@@ -22,20 +28,15 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
--- Enable the following language servers
--- local servers = { "ccls", "pyright", "tsserver", "rust_analyzer", "html", "cssls", "sumneko_lua" }
--- for _, lsp in ipairs(servers) do
-    -- lspconfig[lsp].setup {
-        -- on_attach = on_attach,
-        -- capabilities = capabilities,
-    -- }
--- end
 local lsp_installer = require("nvim-lsp-installer")
 
 -- Register a handler that will be called for each installed server when it's ready (i.e. when installation is finished
 -- or if the server is already installed).
 lsp_installer.on_server_ready(function(server)
-    local opts = {}
+    local opts = {
+        on_attach = on_attach,
+        capabilities = capabilities,
+    }
 
     -- (optional) Customize the options passed to the server
     -- if server.name == "tsserver" then
@@ -47,6 +48,15 @@ lsp_installer.on_server_ready(function(server)
     -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
     server:setup(opts)
 end)
+
+-- Enable the following language servers
+-- local servers = { "ccls", "pyright", "tsserver", "rust_analyzer", "html", "cssls", "sumneko_lua" }
+-- for _, lsp in ipairs(servers) do
+    -- lspconfig[lsp].setup {
+        -- on_attach = on_attach,
+        -- capabilities = capabilities,
+    -- }
+-- end
 
 -- configure omnisharp
 -- local pid = vim.fn.getpid()
