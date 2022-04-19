@@ -1,4 +1,11 @@
 ---------------------------
+-- General Options
+---------------------------
+vim.cmd 'source ~/.config/nvim/vim/options.vim'
+---------------------------
+
+
+---------------------------
 -- Install packer to manage plugins
 ---------------------------
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
@@ -32,6 +39,7 @@ require('packer').startup(function(use)
     -- Additional textobjects for treesitter
     use 'nvim-treesitter/nvim-treesitter-textobjects'
     use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+    use 'williamboman/nvim-lsp-installer'
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -44,13 +52,6 @@ require('packer').startup(function(use)
     -- For Formatting and more lsp
     use { 'jose-elias-alvarez/null-ls.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 end)
----------------------------
-
-
----------------------------
--- General Options
----------------------------
-vim.cmd 'source ~/.config/nvim/vim/options.vim'
 ---------------------------
 
 
@@ -69,4 +70,11 @@ require('andy.telescope')
 require('andy.lsp')
 require('andy.cmp')
 require('andy.null')
+---------------------------
+
+
+---------------------------
+-- General Mappings
+---------------------------
+vim.cmd 'source ~/.config/nvim/vim/cmp_color.vim'
 ---------------------------

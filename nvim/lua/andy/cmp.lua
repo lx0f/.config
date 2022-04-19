@@ -1,33 +1,34 @@
 local kind_icons = {
-    Text = "",
-    Method = "m",
-    Function = "",
-    Constructor = "",
-    Field = "",
-    Variable = "",
-    Class = "",
-    Interface = "",
-    Module = "",
-    Property = "",
-    Unit = "",
-    Value = "",
-    Enum = "",
-    Keyword = "",
-    Snippet = "",
-    Color = "",
-    File = "",
-    Reference = "",
-    Folder = "",
-    EnumMember = "",
-    Constant = "",
-    Struct = "",
-    Event = "",
-    Operator = "",
-    TypeParameter = "",
+    Text = " Text",
+    Method = " Method",
+    Function = " Function",
+    Constructor = " Constructor",
+    Field = " Field",
+    Variable = " Variable",
+    Class = "ﴯ Class",
+    Interface = " Interface",
+    Module = " Module",
+    Property = "ﰠ Property",
+    Unit = " Unit",
+    Value = " Value",
+    Enum = " Enum",
+    Keyword = " Keyword",
+    Snippet = " Snippet",
+    Color = " Color",
+    File = " File",
+    Reference = " Reference",
+    Folder = " Folder",
+    EnumMember = " EnumMember",
+    Constant = " Constant",
+    Struct = "  Struct",
+    Event = " Event",
+    Operator = " Operator",
+    TypeParameter = " TypeParameter",
 }
-
 local luasnip = require('luasnip')
 local cmp = require('cmp')
+
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -62,7 +63,7 @@ cmp.setup {
         end, { 'i', 's' }),
     }),
     formatting = {
-        fields = { "kind", "abbr", "menu" },
+        fields = { "abbr", "kind", "menu" },
         format = function(entry, vim_item)
             -- Kind icons
             vim_item.kind = string.format("%s", kind_icons[vim_item.kind])

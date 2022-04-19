@@ -1,5 +1,6 @@
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8 
+scriptencoding utf-8
 
 " Enable filetype plugins
 filetype plugin on
@@ -142,4 +143,3 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
