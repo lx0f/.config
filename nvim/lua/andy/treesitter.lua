@@ -30,11 +30,11 @@ require('nvim-treesitter.configs').setup {
         "vue",
         "yaml"
     },
-    highlight = {
+    hightlight = {
         enable = true
     },
     indent = {
-        disable = {"html"},
-        enable = true
+        enable = true,
+        disable = {'html'}
     },
 }
