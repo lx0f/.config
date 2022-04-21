@@ -1,11 +1,4 @@
 ---------------------------
--- General Options
----------------------------
-vim.cmd 'source ~/.config/nvim/vim/options.vim'
----------------------------
-
-
----------------------------
 -- Install packer to manage plugins
 ---------------------------
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
@@ -45,13 +38,25 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/cmp-path'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
-    use 'gruvbox-community/gruvbox' -- Best Colorscheme eva
-    use 'OmniSharp/omnisharp-vim' -- For C# Development
     -- For Formatting and more lsp
     use { 'jose-elias-alvarez/null-ls.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+    use 'preservim/nerdtree'
+    use 'SirVer/ultisnips'
+    use 'quangnguyen30192/cmp-nvim-ultisnips'
+    use 'mattn/emmet-vim'
+
+    -- Colorschemes
+    use 'gruvbox-community/gruvbox' -- Best Colorscheme eva
+    use 'tomasiser/vim-code-dark'
+    use 'joshdick/onedark.vim'
 end)
+---------------------------
+
+
+---------------------------
+-- General Options
+---------------------------
+vim.cmd 'source ~/.config/nvim/vim/options.vim'
 ---------------------------
 
 
@@ -78,4 +83,11 @@ require('andy.null')
 -- NOTE: Always source cmp_color.vim last
 ---------------------------
 vim.cmd 'source ~/.config/nvim/vim/cmp_color.vim'
+---------------------------
+
+
+---------------------------
+-- UltiSnips Config
+---------------------------
+vim.cmd 'source ~/.config/nvim/vim/ultisnip.vim'
 ---------------------------

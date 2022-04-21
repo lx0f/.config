@@ -27,4 +27,5 @@ vim.keymap.set('n', '<leader>so', function()
     require('telescope.builtin').tags { only_current_buffer = true }
 end)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
+vim.keymap.set('n', '<leader>q', require('telescope.builtin').diagnostics)
 

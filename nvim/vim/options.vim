@@ -143,3 +143,6 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+" Emmet vim key binding
+let g:user_emmet_leader_key='<leader>'
