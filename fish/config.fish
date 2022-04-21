@@ -8,6 +8,11 @@ abbr -a lll 'exa -la'
 
 abbr -a cat 'bat'
 
+abbr -a python3 'python3.10'
+abbr -a python 'python3.10'
+abbr -a py 'python3.10'
+abbr -a p 'python3.10'
+
 setenv EDITOR nvim
 setenv NAME "Luth Andyka"
 setenv EMAIL luthandyka.business@gmail.com
@@ -52,6 +57,7 @@ end
 function fish_greeting
     neofetch
     cat ~/todo
+    gh status
 end
 
 set PATH $PATH /opt/homebrew/opt/python@3.10/bin

@@ -95,7 +95,11 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+# ON STARUP
+eval 'neofetch'
+eval 'cat ~/todo'
+
 # ALIASES
 alias vi="nvim"
 alias vim="nvim"
@@ -106,13 +110,17 @@ alias ls="exa"
 alias ll="exa -l"
 alias lll="exa -la"
 
+alias p="python3"
+alias py="python3"
+alias python="python3"
+
 alias todo="cat ~/todo"
+alias cat="bat"
 
 # PATH
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
-# ON STARUP
-eval 'neofetch'
-eval 'cat ~/todo'
+if [ "$TMUX" = "" ]; then tmux; fi
+

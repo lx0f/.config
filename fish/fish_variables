@@ -6,6 +6,10 @@ SETUVAR _fish_abbr_l:exa
 SETUVAR _fish_abbr_ll:exa\x20\x2dl
 SETUVAR _fish_abbr_lll:exa\x20\x2dla
 SETUVAR _fish_abbr_ls:exa
+SETUVAR _fish_abbr_p:python3\x2e10
+SETUVAR _fish_abbr_py:python3\x2e10
+SETUVAR _fish_abbr_python:python3\x2e10
+SETUVAR _fish_abbr_python3:python3\x2e10
 SETUVAR _fish_abbr_vi:nvim
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
