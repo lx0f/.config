@@ -1,4 +1,6 @@
 local lspconfig = require('lspconfig')
+
+
 local on_attach = function(_, bufnr)
     local opts = { buffer = bufnr }
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -52,10 +54,10 @@ end)
 -- Enable the following language servers
 -- local servers = { "ccls", "pyright", "tsserver", "rust_analyzer", "html", "cssls", "sumneko_lua" }
 -- for _, lsp in ipairs(servers) do
-    -- lspconfig[lsp].setup {
-        -- on_attach = on_attach,
-        -- capabilities = capabilities,
-    -- }
+-- lspconfig[lsp].setup {
+-- on_attach = on_attach,
+-- capabilities = capabilities,
+-- }
 -- end
 
 -- configure omnisharp
@@ -65,3 +67,23 @@ end)
 --    cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
 --    on_attach = on_attach
 --}
+
+local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+}
+
+for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+end
+
+local config = {
+    -- show signs
+    signs = {
+        active = signs,
+    },
+}
+
+vim.diagnostic.config(config)

@@ -75,6 +75,7 @@ require('andy.telescope')
 require('andy.lsp')
 require('andy.cmp')
 require('andy.null')
+require('andy.git')
 ---------------------------
 
 

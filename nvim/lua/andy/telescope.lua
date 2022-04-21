@@ -28,4 +28,5 @@ vim.keymap.set('n', '<leader>so', function()
 end)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
 vim.keymap.set('n', '<leader>q', require('telescope.builtin').diagnostics)
+vim.keymap.set('n', '<leader>tl', ':Telescope<cr>')
 
