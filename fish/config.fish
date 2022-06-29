@@ -54,10 +54,5 @@ function fish_prompt
 	set_color normal
 end
 
-function fish_greeting
-    neofetch
-    cat ~/todo
-    gh status
-end
-
 set PATH $PATH /opt/homebrew/opt/python@3.10/bin
+set PATH $PATH $HOME/.cargo/bin/
