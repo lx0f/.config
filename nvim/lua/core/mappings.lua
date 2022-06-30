@@ -26,11 +26,76 @@ mappings.n["<leader>pu"] = { "<cmd>PackerUpdate<cr>", desc = "Packer Update" }
 -- Bufdelete
 mappings.n["<leader>c"] = { "<cmd>Bdelete<cr>", desc = "Close window" }
 
+-- Comment
+mappings.n["<leader>/"] = {
+    function()
+      require("Comment.api").toggle_current_linewise()
+    end,
+    desc = "Comment line",
+}
+
+mappings.v["<leader>/"] = {
+    "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<cr>",
+    desc = "Toggle comment line",
+  }
+
 -- Navigate buffers
 mappings.n["<S-l>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer tab" }
 mappings.n["<S-h>"] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer tab" }
 mappings.n[">b"] = { "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer tab right" }
 mappings.n["<b"] = { "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer tab left" }
+
+-- Better split navigation
+mappings.n["<C-h>"] = {
+  function()
+    require("smart-splits").move_cursor_left()
+  end,
+  desc = "Move to left split",
+}
+mappings.n["<C-j>"] = {
+function()
+  require("smart-splits").move_cursor_down()
+end,
+desc = "Move to below split",
+}
+mappings.n["<C-k>"] = {
+function()
+  require("smart-splits").move_cursor_up()
+end,
+desc = "Move to above split",
+}
+mappings.n["<C-l>"] = {
+function()
+  require("smart-splits").move_cursor_right()
+end,
+desc = "Move to right split",
+}
+
+-- Resize with arrows
+mappings.n["<C-Up>"] = {
+function()
+  require("smart-splits").resize_up()
+end,
+desc = "Resize split up",
+}
+mappings.n["<C-Down>"] = {
+function()
+  require("smart-splits").resize_down()
+end,
+desc = "Resize split down",
+}
+mappings.n["<C-Left>"] = {
+function()
+  require("smart-splits").resize_left()
+end,
+desc = "Resize split left",
+}
+mappings.n["<C-Right>"] = {
+function()
+  require("smart-splits").resize_right()
+end,
+desc = "Resize split right",
+}
 
 -- Telescope
 mappings.n["<leader>fw"] = {

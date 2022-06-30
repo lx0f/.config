@@ -201,8 +201,25 @@ local plugins = {
 
     -- Colorschemes
     ["Mofiqul/vscode.nvim"] = {},
-    ["RRethy/nvim-base16"] = {}
 
+    ["RRethy/nvim-base16"] = {},
+
+    -- Comments
+    ["numToStr/Comment.nvim"] = {
+        module = { "Comment", "Comment.api" },
+        keys = { "gc", "gb", "g<", "g>" },
+        config = function()
+            require "configs.Comment"
+        end,
+    },
+
+    -- Smooth scrolling
+    ["declancm/cinnamon.nvim"] = {
+        event = { "BufRead", "BufNewFile" },
+        config = function()
+            require "configs.cinnamon"
+        end,
+    },
 }
 
 return require('packer').startup(

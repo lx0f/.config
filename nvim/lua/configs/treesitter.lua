@@ -5,6 +5,7 @@ if status_ok then
         sync_install = false,
         ignore_install = {},
         highlight = {
+            disable = { "toml" },
             enable = true,
             additional_vim_regex_highlighting = false,
         },
