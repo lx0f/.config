@@ -1,0 +1,48 @@
+# .config - Luth's Opinonated DevEnv
+
+# Core
+
+## Tools
+
+- Package Manager         ([Homebrew](https://brew.sh/))
+- Terminal                ([iTerm2](https://iterm2.com/))
+- Shell                   ([fish](https://fishshell.com/))
+- Editor                  ([Neovim](https://neovim.io/))
+- Container Runner        ([Docker](https://docker.com))
+- Container Orchestration ([Kubernetes](https://kubernetes.io/))
+- Version Control         ([Git](https://git-scm.com/))
+- Stacked Diffs Helper    ([Graphite](https://graphite.dev/))
+- AWS CLI                 ([aws/aws-cli](https://github.com/aws/aws-cli))
+- AWS Vault               ([99designs/aws-vault](https://github.com/99designs/aws-vault))
+
+## Database Vendors
+
+- PostgreSQL ([PostgreSQL](https://postgresql.org))
+- MySQL      ([MySQL](https://dev.mysql.com))
+
+## Languages
+
+- Golang     ([golang](https://go.dev/))
+- TypeScript ([typescript](https://typescriptlang.org/))
+
+### Golang
+
+- Compiler                 ([go](https://formulae.brew.sh/formula/go#default))
+- Linter                   ([golangci/golangci-lint](https://github.com/golangci/golangci-lint))
+- Formatter                ([gofmt](https://pkg.go.dev/cmd/gofmt))
+- Language Server Protocol ([gopls](https://pkg.go.dev/golang.org/x/tools/gopls))
+
+### TypeScript
+
+- Compiler                 ([Rollup](https://rollupjs.org/))
+- Linter                   ([ESLint](https://eslint.org/))
+- Formatter                ([Prettier](https://prettier.io/))
+- Language Server Protocol ([typescript-language-server/typescript-language-server](https://github.com/typescript-language-server/typescript-language-server))
+- Package Manager 1        ([npm](https://npmjs.com/))
+- Runtime 1                ([node](https://nodejs.org/en/))
+- Package Manager 2        ([bun](https://bun.sh/))
+- Runtime 2                ([bun](https://bun.sh/))
+
+## Games
+
+- Cataclysm: Dark Days Ahead 🔥🧟🔫 ([CleverRaven/Cataclysm-DDA](https://github.com/CleverRaven/Cataclysm-DDA))
